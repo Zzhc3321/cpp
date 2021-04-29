@@ -10,6 +10,6 @@ int main(){
 
   double radian = angle*PI/180;
   cout<<"sin("<<angle<<")="<<sin(radian)<<endl;
-    cout<<"cos("<<angle<<")="<<cos(radian)<<endl;
-      cout<<"tan("<<angle<<")="<<tan(radian)<<endl;
+  cout<<"cos("<<angle<<")="<<cos(radian)<<endl;
+  cout<<"tan("<<angle<<")="<<tan(radian)<<endl;
 }
