@@ -16,5 +16,5 @@ int main(){
   cout<<"a is : "<<a<<" and b is : "<<b<<endl;
   swap(a,b);
   cout<<"after swaped"<<"\n"<<"a is : "<<a<<" and b is : "<<b<<endl;
-
+  return 0;
 }
