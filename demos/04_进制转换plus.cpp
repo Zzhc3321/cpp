@@ -19,9 +19,6 @@ double power(double x,int n){
   return val;
 }
 
-
-
-
 //二进制转换成十进制
 int b_to_d(int x){
   int y=x,z,sum=0,i=0;
