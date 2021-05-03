@@ -19,6 +19,9 @@ double power(double x,int n){
   return val;
 }
 
+
+
+
 //二进制转换成十进制
 int b_to_d(int x){
   int y=x,z,sum=0,i=0;
@@ -29,8 +32,6 @@ int b_to_d(int x){
   }
   return sum;
 }
-
-
 // 重载函数计算小数部分
 double b_to_d(double x){
   int y=int(x),z,i=0,k,j=-1;
@@ -47,16 +48,6 @@ double b_to_d(double x){
   return sum;
 }
 
-
-
-
-
-
-
-
-
-
-
 //十进制转换成二进制
 int d_to_b(int x){
   int y=x,z,sum=0,i=0;
@@ -70,9 +61,24 @@ int d_to_b(int x){
     sum += a[--i]*power(10,i);
   return sum;
 }
-// 重载函数
+// 重载函数计算小数部分
 double d_to_b(double x){
-  return 0;
+  int y=int(x),z,i=0,k,j=-1;
+  int l=5; // 控制精度
+  double yx=x-y,sum=0;
+  int a[999]={0};
+  while(y){
+    a[i++] = y%2;
+    y = y/2;
+  }
+  // cout<<"this 2 bit binary has the length of "<<i<<endl;
+  while(i)
+    sum += a[--i]*power(10,i);
+  while(l--){
+    sum += int(yx*2)*power(10,j--);
+    yx = (yx*2)-int(yx*2);
+  }
+  return sum;
 }
 
 
@@ -86,9 +92,14 @@ int main(){
   cout<<"please input an double binary:"<<endl;
   cin>>x1;
   cout<<"The result of binary to decimal is "<<b_to_d(x1)<<endl;
-  //
-  // cout<<"please input an decimal:"<<endl;
-  // cin>>y;
-  // y = d_to_b(y);
-  // cout<<"The result of decimal to binary is "<<y<<endl;
+
+  cout<<"please input an decimal:"<<endl;
+  cin>>y;
+  y = d_to_b(y);
+  cout<<"The result of decimal to binary is "<<y<<endl;
+
+  cout<<"please input an double decimal:"<<endl;
+  cin>>y1;
+  y1 = d_to_b(y1);
+  cout<<"The result of decimal to binary is "<<y1<<endl;
 }
