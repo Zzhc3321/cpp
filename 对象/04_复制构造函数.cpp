@@ -25,6 +25,7 @@ int main(){
   clock a(1);
   clock b(a);
   clock c = a;
+  // b和c执行的时候完全相同
   cout<<a.gett()<<endl;
     cout<<b.gett()<<endl;
       cout<<c.gett()<<endl;
