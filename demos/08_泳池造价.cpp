@@ -28,11 +28,11 @@ Circle::Circle(float r){
 }
 
 float Circle::circumference(){
-  return 35*2*PI*radius;
+  return FENCE_PRICE*2*PI*(radius+3);
 }
 
 float Circle::area(){
-  return 25*(PI*(radius+3)*(radius+3) - PI*radius*radius);
+  return CONCERTE_PRICE*(PI*(radius+3)*(radius+3) - PI*radius*radius);
 }
 
 int main(){
