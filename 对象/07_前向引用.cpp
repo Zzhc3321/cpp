@@ -40,7 +40,6 @@ Line::Line(Line &l):p1(l.p1),p2(l.p2){
   len=l.len;
 }
 
-
 int main(){
   Point myp1(1,1),myp2(4,5);
   Line line(myp1,myp2);
