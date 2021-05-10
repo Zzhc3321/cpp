@@ -38,13 +38,21 @@ private:
 };
 
 // 组合类的构造函数
-Line::Line(Point xp1,Point xp2):p1(xp1),p2(xp2){
+Line::Line(Point xp1,Point xp2){
+  p1 = xp1;
+  p2 = xp2;
   double x = static_cast<double>(p1.getx()-p2.getx());
   double y = static_cast<double>(p1.gety()-p2.gety());
   len = sqrt(x*x+y*y);
 }
 // 组合类的复制构造函数
-Line::Line(Line &l):p1(l.p1),p2(l.p2){
+// Line::Line(Line &l):p1(l.p1),p2(l.p2){
+//   len = l.len;
+// }
+
+Line::Line(Line &l){
+  p1 = l.p1;
+  p2 = l.p2;
   len = l.len;
 }
 
