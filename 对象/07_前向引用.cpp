@@ -2,42 +2,16 @@
 #include <cmath>
 using namespace std;
 
-class Point{
+// 类A与类B互相包含，那么必须要前向引用
+class B;//前向引用
+
+class A{
 public:
-  Point(int xx=0,int yy=0){
-    x=xx;
-    y=yy;
-  }
-  Point(Point &p);
-  int getx(){return x;}
-  int gety(){return y;}
-private:
-  int x,y;
+  void f1(B b);
 };
-
-Point::Point(Point &p){
-  x = p.x;
-  y = p.y;
-}
-
-class Line{
+class B{
 public:
-  Line(Point xp1,Point xp2);
-  Line(Line &l);
-  double getlen(){return len;};
-private:
-  Point p1,p2;
-  double len;
-};
-
-Line::Line(Point xp1,Point xp2):p1(xp1),p2(xp2){
-  double x = static_cast<double>(p1.getx()-p2.getx());
-  double y = static_cast<double>(p1.gety()-p2.gety());
-  len = sqrt(x*x+y*y);
-}
-
-Line::Line(Line &l):p1(l.p1),p2(l.p2){
-  len=l.len;
+  void f2(A a);
 }
 
 int main(){
