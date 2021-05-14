@@ -15,7 +15,8 @@ struct Student{
   int age;
 };
 
-(){
+
+int main(){
   Student stu={185288,"zzhc",'M',21};
   cout<<"name:"<<stu.name<<endl;
   cout<<"student_id:"<<stu.num<<endl;
