@@ -19,12 +19,14 @@ using namespace std;
 
 class ExamInfo{
 public:
-  ExamInfo(string name,char grade){
-    name="English";
+  ExamInfo(string name1,char grade1){
+    name=name1;
     mode=GRADE;
-    grade=grade;}
-  ExamInfo(string name,bool pass):name(name),mode(PASS),pass(pass){}
-  ExamInfo(string name,int percent):name(name),mode(PERCENTAGE),percent(percent){}
+    grade=grade1;
+  }
+  // 初始化话参数列表
+  ExamInfo(string name1,bool pass1):name(name1),mode(PASS),pass(pass1){}
+  ExamInfo(string name1,int percent1):name(name1),mode(PERCENTAGE),percent(percent1){}
   void show();
 
 private:
