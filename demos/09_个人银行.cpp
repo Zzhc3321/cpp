@@ -10,7 +10,7 @@ private:
   int lastDate;
   double accumulation;
   void record(int date,double amount);
-  double accumulate(int date) const{
+  double accumulate(int date) const{//决定了在该成员函数中，任意修改它所在的类的成员的操作都是不允许的
     return accumulation+balance*(date-lastDate);
   }
 public:
