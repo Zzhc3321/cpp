@@ -56,7 +56,7 @@ void SavingsAccount::settle(int date){
 }
 
 void SavingsAccount::show(){
-  cout<<"#"<<id<<"\tBalance:"<<balance;
+  cout<<"#"<<id<<"\tBalance:"<<balance<<endl;
 }
 
 int main(){
@@ -65,6 +65,6 @@ int main(){
   sa0.deposit(5,5000);
   // sa0.show();
   sa0.settle(90);
-  // sa0.show();
+  sa0.show();
   return 0;
 }
