@@ -31,7 +31,7 @@ class Line{
 public:
   Line(Point xp1,Point xp2);
   Line(Line &l);
-  double getlen(){return len;};
+  double getlen(){return len;}
 private:
   Point p1,p2;
   double len;
