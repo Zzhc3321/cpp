@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
+
 // 类的组合描述就是一个类内嵌其他类的对象作为成员的情况
 
 // 当创建类对象时，内嵌对象将会优先自动创建
