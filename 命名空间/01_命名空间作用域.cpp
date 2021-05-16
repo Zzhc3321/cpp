@@ -4,7 +4,7 @@ using namespace std;
 int i;// 全局命名空间的全局变量
 
 namespace Ns{
-  int j;//Ns命名空间中的全局变量
+  int j;//Ns命名空间中的(全局变量)
 }
 
 int main(){
