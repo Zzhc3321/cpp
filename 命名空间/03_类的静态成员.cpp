@@ -12,7 +12,7 @@ public:
   ~Point(){count--;}
   int getX(){return x;}
   int getY(){return y;}
-  void showCount(){cout<<"Object count="<<count<<endl;}
+  static void showCount(){cout<<"Object count="<<count<<endl;}
 private:
   int x,y;
   static int count;
@@ -20,7 +20,12 @@ private:
 
 int Point::count = 0; //初始化
 
+
+// 静态成员函数可以通过类名或对象名来调用
+// 非静态成员函数智能通过对象名来调用
+
 int main(){
+  Point::showCount();
   Point a(4,5);
   cout<<"Point A:"<<a.getX()<<','<<a.getY()<<endl;
   a.showCount();
