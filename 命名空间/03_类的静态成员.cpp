@@ -12,7 +12,7 @@ public:
   ~Point(){count--;}
   int getX(){return x;}
   int getY(){return y;}
-  static void showCount(){cout<<"Object count="<<count<<endl;}
+  static void showCount(){cout<<"Object count="<<count<<endl;}//¾²Ì¬³ÉÔ±º¯Êı
 private:
   int x,y;
   static int count;
