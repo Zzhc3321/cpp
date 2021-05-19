@@ -26,7 +26,6 @@ void A::print(){
 }
 
 int main(){
-
   A a1(100),a2(0);
   a1.print();
   a2.print();
