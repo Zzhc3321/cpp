@@ -27,6 +27,10 @@ void A::print(){
   cout<<a<<":"<<b<<endl;
 }
 
+
+// 常引用所引用的对象不能被更新。
+// const 类型说明符 &引用名
+
 int main(){
   A a1(100),a2(0);
   a1.print();
