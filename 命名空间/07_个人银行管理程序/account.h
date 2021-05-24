@@ -11,7 +11,7 @@ private:
     return accumulation+balance*(date-lastDate);
   }
 public:
-  SavingAccount{int date.int id,double rate};
+  SavingAccount(int date,int id,double rate);
   int getID() const {return id;}
   double getBalance() const {return balance;}
   double getRate() const {return rate;}
