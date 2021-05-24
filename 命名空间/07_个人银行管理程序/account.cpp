@@ -1,15 +1,15 @@
-#inlucde "account.h"
+#include "account.h"
 #include <cmath>
 #include <iostream>
 using namespace std;
 
-double SacingAccount::total=0;
+double SavingAccount::total=0;
 
-SavingAccount::SacingAccount(int date,int id,double rate):id(id),balance(0),rate(rate),lastDate(date),accumulation(0){
+SavingAccount::SavingAccount(int date,int id,double rate):id(id),balance(0),rate(rate),lastDate(date),accumulation(0){
   cout<<date<<"\t#"<<id<<"is created"<<endl;
 }
 void SavingAccount::record(int date,double amount){
-  accmulate = accumulate(date);
+  accumulation = accumulate(date);
   lastDate = date;
   amount = floor(amount*100+0.5)/100;
   balance+=amount;
@@ -22,11 +22,10 @@ void SavingAccount::deposit(int date,double amount){
 }
 
 void SavingAccount::withdraw(int date,double amount){
-  if(amount>getBalance()){
+  if(amount>getBalance())
     cout<<"Error:Ç®²»¹»"<<endl;
-    else
+  else
     record(date,-amount);
-  }
 }
 
 void SavingAccount::settle(int date){
