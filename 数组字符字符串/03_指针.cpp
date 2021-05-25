@@ -8,4 +8,5 @@ int main(){
   int *p=&i;
   i = 100;
   cout<<*p<<endl;
-}
+
+  // 可以更改指针所致=
