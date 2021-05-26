@@ -16,5 +16,11 @@ int main(){
   // void 指针一般用在指向数据类型不确定时使用
   void *vp;
 
+  int a[5]={1,2,3,4,5};
+
+  for(int k=0;k<5;k++)
+      cout<<*(a+k)<<endl;
+  for(int *ap=a;ap<a+5;*ap++)
+    cout<<*ap<<endl;
   return 0;
 }
