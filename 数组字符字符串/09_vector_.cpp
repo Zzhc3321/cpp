@@ -2,6 +2,7 @@
 #include <vector>
 using namespace std;
 
+// ¶¯Ì¬
 double average(const vector<double>&arr){
   double sum = 0;
   for (unsigned i=0;i<arr.size();i++){
