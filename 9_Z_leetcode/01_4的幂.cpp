@@ -14,10 +14,16 @@ public:
         }
         return false;
     }
+
+    // 位运算n&(n-1)==0 判断是否是2幂
+    bool isPowerOfFour2(int n) {
+        return n > 0 && (n &1) == 0 && n%3==1;
+        // (n & 1) == 0 判断是否是2的倍数
+    }
+
 };
 
 int main(){
 Solution stou;
-cout<<stou.isPowerOfFour(4*4*4*4*3)<<endl;
-
+cout<<stou.isPowerOfFour2(4*4*4*4*4)<<endl;
 }
