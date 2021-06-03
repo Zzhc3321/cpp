@@ -6,6 +6,7 @@ public:
     bool checkZeroOnes(string s) {
         int one_n=0,zero_n=0;
         int one_t=0,zero_t=0;
+        int l = s.size();
         char s0 = s[0];
         if(s0=='1'){
             one_t++;
@@ -15,7 +16,7 @@ public:
             zero_n++;
             zero_t++;
         }
-        for(int i=1;i<s.size();i++){
+        for(int i=1;i<l;i++){
                 if(s[i]=='1'){
                     zero_t=0;
                     one_t++;
