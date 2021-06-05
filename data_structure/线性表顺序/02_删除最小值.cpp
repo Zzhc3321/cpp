@@ -42,7 +42,6 @@ int main(){
     cout<<"The min elem is : "<<res<<endl;
     cout<<"The result of this solution is : ";
     ShowElem(LS);
-
-
+    
   return 0;
 }
