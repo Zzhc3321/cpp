@@ -16,9 +16,6 @@ bool Solution(List &L,int min,int max){
       start = i;
       break;
     }
-05.
-
-
   for(int i = start;i<L.length;i++)
     if(L.data[i]>max)
       end = i;
@@ -32,7 +29,6 @@ bool Solution(List &L,int min,int max){
   return true;
 
 }
-
 
 void ShowElem(List L){
   for(int i=0;i<L.length;i++)
@@ -52,7 +48,6 @@ int main(){
   Solution(LS,3,5);
   cout<<"The soultion of this question is : ";
   ShowElem(LS);
-
 
   return 0;
 }
