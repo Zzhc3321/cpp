@@ -40,10 +40,10 @@ void Create_list_tail(Llist &L){
 }
 
 void ShowElem(Llist L){
-  LNode *p=L;
-  while(p!=NULL){
-    p = p->next;
+  LNode *p = L->next;
+  while(p->next!=NULL){
     cout<<p->data<<' ';
+    p = p->next;
   }
   cout<<endl;
 }
@@ -55,7 +55,6 @@ bool GetElem(Llist L,int i,LNode *res){
       break;
     p = p->next;
   }
-  cout<<p->data<<endl;
   if(p==NULL)
     return false;
   else{
@@ -72,7 +71,7 @@ int main(){
   Llist L;
   Init_LinkList(L);
   Create_list_tail(L);
-  // ShowElem(L);
+  ShowElem(L);
 
   LNode *node;
   node = new(LNode);
