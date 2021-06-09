@@ -34,6 +34,21 @@ bool Create_Link_list(Llist &L){
   return true;
 }
 
+bool Delete_elem_by_position(Llist &L,int i){
+  if(i<=0)
+    return false;
+  LNode *p = L;
+  for(int j=0;j<i;j++){
+    p = p->next;
+    if(p==NULL)
+      return false;
+  }
+  p->prior->next = p->next;
+  p->next->prior = p->prior;
+  delete p;
+  return true;
+}
+
 void ShowElem_by_next(Llist L){
   LNode *p = L->next;
   while(p!=NULL){
@@ -46,10 +61,8 @@ void ShowElem_by_next(Llist L){
 void ShowElem_by_prior(Llist L){
   LNode *p = L;
   while(p->next!=NULL){
-    cout<<p->next->data<<' ';
     p = p->next;
   }
-  cout<<endl;
   while(p->prior!=NULL){
     cout<<p->data<<' ';
     p = p->prior;
@@ -62,7 +75,8 @@ int main(){
   Init_Two_way_Link_list(L);
   cout<<"please enter elms (end by 999):"<<endl;
   Create_Link_list(L);
-
+  ShowElem_by_prior(L);
+  Delete_elem_by_position(L,5);
   ShowElem_by_prior(L);
 
   return 0;
