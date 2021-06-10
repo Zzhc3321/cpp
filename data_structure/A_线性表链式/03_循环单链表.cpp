@@ -16,5 +16,6 @@ bool Init_circle_link_list(&L){
 int main(){
   Llist = L;
   Init_circle_link_list(L);
+  
   return 0;
 }
