@@ -53,6 +53,19 @@ bool Delete_elem_by_Elem(Llist &L,Elemtype e){
   return true;
 }
 
+bool Delete_elem_by_Position(Llist &L,int pos){
+  if(pos<=0)
+  return false;
+  LNode *p=L;
+  while(--pos){
+    p = p->next;
+  }
+  LNode *de=p->next;
+  p->next = p->next->next;
+  delete de;
+  return true;
+}
+
 bool ShowElem(Llist L,int num){
   LNode *p=L;
   while(num--){
@@ -76,6 +89,8 @@ int main(){
   Insert_elem(L,e,e->data);
   ShowElem(L,50);
   Delete_elem_by_Elem(L,e->data);
+  ShowElem(L,50);
+  Delete_elem_by_Position(L,5);
   ShowElem(L,50);
   return 0;
 }
