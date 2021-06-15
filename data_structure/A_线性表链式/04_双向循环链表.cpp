@@ -32,6 +32,11 @@ bool Create_Linklist(Llist &L){
     return true;
 }
 
+bool Insert_elem(Llist &L,Elemtype e,int i){
+
+  return true;
+}
+
 bool ShowElem_by_next(Llist L){
   LNode *p=L->next;
   while(p!=L){
