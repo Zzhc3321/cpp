@@ -33,6 +33,16 @@ bool Create_Linklist(Llist &L){
 }
 
 bool Insert_elem(Llist &L,Elemtype e,int i){
+  LNode *s,*p=L;
+  while(--i){
+    p = p->next;
+  }
+  s = new(LNode);
+  s->data = e;
+  s->next = p->next;
+  s->prior = p;
+  p->next->prior = s;
+  p->next = s;
 
   return true;
 }
@@ -60,7 +70,10 @@ bool ShowElem_by_prior(Llist L){
 int main(){
   Llist L;
   Init_two_way_circle_link_list(L);
-  Create_Linklist(L);
+  // Create_Linklist(L);
+  Insert_elem(L,3,1);
+    Insert_elem(L,2,1);
+      Insert_elem(L,1,1);
   ShowElem_by_next(L);
   ShowElem_by_prior(L);
   return 0;
