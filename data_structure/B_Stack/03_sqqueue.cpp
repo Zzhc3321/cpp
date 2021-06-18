@@ -30,14 +30,16 @@ bool Is_full(struct queue &Q){
 bool Enqueue(struct queue &Q, Elemtype e){
   if (Is_full(Q))
     return false;
-  Q.data[Q.rear++%Max_size]=e;
+  Q.data[Q.rear]=e;
+    Q.rear = (Q.rear+1)%Max_size;
   return true;
 }
 
 bool Dequeue(struct queue &Q,Elemtype &e){
   if (Is_empty(Q))
     return false;
-  e = Q.data[Q.front++%Max_size];
+  e = Q.data[Q.front];
+    Q.front = (Q.front+1)%Max_size;
   return true;
 }
 
