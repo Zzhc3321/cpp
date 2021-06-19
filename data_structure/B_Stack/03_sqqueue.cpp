@@ -67,6 +67,5 @@ int main(){
   cout<<Is_full(Q)<<endl;
   Get_top_elem(Q,e);
   cout<<e<<endl;
-
   return 0;
 }
