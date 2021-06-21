@@ -2,8 +2,6 @@
 #include<string>
 using namespace std;
 
-// 带头结点
-
 typedef double Elemtype;
 
 typedef struct LNode{
