@@ -6,7 +6,7 @@ public:
   MyString();//构造
   MyString(const char *const);//构造
   MyString(const MyString &);//复制构造
-  ~MyString();
+  // ~MyString();
 
   char& operator[](unsigned short offset);
   char operator[](unsigned short offset) const;
@@ -44,7 +44,8 @@ char MyString::operator[](unsigned short offset) const{
 MyString MyString::operator+(const MyString& rhs){
   unsigned short totallen = itslen+rhs.GetLen();
   MyString temp(totallen);
-  for(unsigned short i=0;i<itslen;i++)
+  unsigned short i=0;
+  for(i=0;i<itslen;i++)
     temp[i] = itsMyString[i];
   for(unsigned short j=0;j<rhs.GetLen();j++,i++)
     temp[i] = rhs[j];
@@ -54,17 +55,19 @@ MyString MyString::operator+(const MyString& rhs){
 
 void MyString::operator+=(const MyString& rhs){
   unsigned short rhsLen = rhs.GetLen();
-  unsigned short totalLen = itsLen + rhsLen;
+  unsigned short totalLen = itslen + rhsLen;
   MyString temp(totalLen);
-  for (unsigned short i = 0; i<itsLen; i++)
+  unsigned short i=0;
+  for(i=0;i<itslen;i++)
     temp[i] = itsMyString[i];
   for (unsigned short j = 0; j<rhs.GetLen(); j++, i++)
-    temp[i] = rhs[i-itsLen];
+    temp[i] = rhs[i-itslen];
   temp[totalLen]='\0';
   *this = temp;
 }
 
 int main(){
-
+  MyString s1("initial test");
+  cout<<"s1:"<<s1.GetMyString()<<endl;
   return 0;
 }
