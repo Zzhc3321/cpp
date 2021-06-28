@@ -1,4 +1,4 @@
-#include <iostream.h>
+#include <iostream>
 using namespace std;
 
 typedef unsigned short USHORT;
@@ -25,7 +25,7 @@ Counter Counter::operator+ (const Counter & rhs){
 }
 
 int main(){
-  Counter varOne(2)£¬ varTwo(4)£¬ varThree;
+  Counter varOne(2),varTwo(4),varThree;
   varThree = varOne + varTwo;
   cout << "varOne: " << varOne.GetItsVal()<< endl;
   cout << "varTwo: " << varTwo.GetItsVal() << endl;
