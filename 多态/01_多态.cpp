@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+// 带有纯虚函数的类是抽象类。
 class Shape {
    protected:
       int width, height;
