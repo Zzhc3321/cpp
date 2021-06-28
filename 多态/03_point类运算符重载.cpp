@@ -3,7 +3,7 @@ using namespace std;
 
 class Point{
 public:
-  Point& operator++();
+  Point& operator++();//前置
   Point operator++(int);
   Point& operator--();
   Point operator--(int);
@@ -50,6 +50,6 @@ int main(){
   cout << "A的值为：" << A.x() << " , " << A.y() << endl;
   --A;
   cout << "A的值为：" << A.x() << " , " << A.y() << endl;
-  
+
   return 0;
 }
