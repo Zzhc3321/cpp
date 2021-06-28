@@ -10,6 +10,10 @@ class Shape {
          width = a;
          height = b;
       }
+      /*
+      虚函数 是在基类中使用关键字 virtual 声明的函数。在派生类中重新定义基类中定义的虚函数时，会告诉编译器不要静态链接到该函数。
+      我们想要的是在程序中任意点可以根据所调用的对象类型来选择调用的函数，这种操作被称为动态链接，或后期绑定。
+      */
       virtual int area()
       {
          cout << "Parent class area :" <<endl;
