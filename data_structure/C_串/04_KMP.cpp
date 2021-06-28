@@ -46,7 +46,7 @@ void get_nextval(sstring T,int get_nextval[]){
       if(T.ch[i]!=T.ch[j]) nextval[i] = j;
       else nextval[i] = nextval[j];
     }
-    else j=nextval[j]
+    else j=nextval[j];
   }
 }
 
