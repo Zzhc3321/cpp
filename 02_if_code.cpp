@@ -1,17 +1,11 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-int main(){
-  int x,y;
-  cout<<"enter x and y:"<<"\n";
-  cin>>x>>y;
 
-  if (x!=y){
-    if (x>y)
-      cout <<"x>y"<<endl;
-    else
-      cout<<"x<y"<<endl;
-  }
+int main(){
+  int a=10;
+  if(a>10)
+    cout<<"a>10"<<endl;
   else
-    cout<<"x=y"<<endl;
+    cout<<"a<=10"<<endl;
   return 0;
 }
