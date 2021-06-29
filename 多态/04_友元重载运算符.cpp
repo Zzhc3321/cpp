@@ -1,8 +1,7 @@
 #include <iostream>
 using namespace std;
 
-class Point
-{
+class Point{
 public:
   Point() { X = Y = 0; }
   Point( unsigned x, unsigned y ) { X = x; Y = y; }
