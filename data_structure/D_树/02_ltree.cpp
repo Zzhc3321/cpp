@@ -1,4 +1,5 @@
 #include <iostream>
+#include<queue>
 using namespace std;
 // ¶þ²æÊ÷µÄÁ´Ê½´æ´¢
 const int Max_size = 100;
@@ -34,6 +35,23 @@ void BaOrder(BiTree T){
   }
 }
 
+void ArrOrder(BiTree T){
+  queue<BiTNode*> q;
+  q.push(T);
+  BiTNode *t;
+  while(!q.empty()){
+    t = q.front();
+    q.pop();
+
+    cout<<t->data<<' ';
+    if(t->lchild)
+      q.push(t->lchild);
+    if(t->rchild)
+      q.push(t->rchild);
+  }
+  cout<<endl;
+}
+
 int main(){
   BiTree root;
   root = new BiTNode;
@@ -52,5 +70,7 @@ int main(){
   cout<<endl;
   BaOrder(root);
   cout<<endl;
+  ArrOrder(root);
+
   return 0;
 }
