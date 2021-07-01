@@ -8,10 +8,10 @@ void show_elem(T a[],int n){
   cout<<endl;
 }
 
-template <class T>
-void insertionSort(T a[],int n){
+template <class K>
+void insertionSort(K a[],int n){
   int i,j;
-  T tem;
+  K tem;
   for(int i=1;i<n;i++){
     int j=i;
     tem = a[i];
