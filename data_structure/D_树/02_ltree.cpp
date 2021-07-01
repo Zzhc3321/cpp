@@ -71,6 +71,5 @@ int main(){
   BaOrder(root);
   cout<<endl;
   ArrOrder(root);
-
   return 0;
 }
