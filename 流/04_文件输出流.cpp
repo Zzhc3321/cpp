@@ -7,6 +7,6 @@ struct Date{
 }
 
 int main(){
-  
+
   return 0;
 }
