@@ -7,7 +7,7 @@ double solvation(vector<int>& nums1,vector<int>& nums2){
   vector<double> result(m+n);
   int i=0,j=0,k=0;
   while(k<=(m+n)/2){
-    if((i<m&&nums1[i]<nums2[j]) || j>n-1 )
+    if((i<m&&nums1[i]<nums2[j]) || j==n-1 )
       result[k++]=nums1[i++];
     else
       result[k++]=nums2[j++];
