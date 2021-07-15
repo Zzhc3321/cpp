@@ -18,17 +18,26 @@ double solvation(vector<int>& nums1,vector<int>& nums2){
     return result[(m+n)/2];
 }
 
-// double solvation(int nums1[],int nums2[],int m,int n){
-//
-// }
+double solvation2(vector<int>& nums1,vector<int>& nums2){
+  int m=nums1.size(),n=nums2.size();
+  if(m>n){
+    vector<int> tem=nums1;
+    nums1 = nums2;
+    nums2 = tem;
+    int t=m;
+    m = n;
+    n = t;
+  }
+  return m;
+}
 
 int main(){
-  vector<int> nums1(2),nums2(2);
+  vector<int> nums1(2),nums2(1);
   nums1[0]=0;
-  nums1[1]=0;
+  nums1[1]=1;
   nums2[0]=0;
-  nums2[1]=0;
 
-  cout<<solvation(nums1,nums2)<<endl;
+
+  cout<<solvation2(nums1,nums2)<<endl;
   return 0;
 }
