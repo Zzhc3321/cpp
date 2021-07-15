@@ -28,6 +28,17 @@ double solvation2(vector<int>& nums1,vector<int>& nums2){
     m = n;
     n = t;
   }
+
+  int leftLen = (m + n + 1) / 2;
+  // 对数组1进行二分检索
+  int start = 0;
+  int end = m;
+
+  while(start<=end){
+
+
+
+  }
   return m;
 }
 
