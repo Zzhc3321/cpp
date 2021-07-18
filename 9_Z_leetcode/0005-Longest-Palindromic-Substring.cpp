@@ -40,9 +40,6 @@ string Solution(string s){
     res+=*(p+true_pos-max_len+j);
   }
 
-
-
-
   return res;
 }
 
