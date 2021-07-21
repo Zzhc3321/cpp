@@ -36,8 +36,6 @@ double solvation2(vector<int>& nums1,vector<int>& nums2){
 
   while(start<=end){
 
-
-
   }
   return m;
 }
