@@ -3,19 +3,20 @@
 using namespace std;
 
 string convert(string s, int numRows){
-  string res[numRows]={" "};
+  string res[numRows];
   for(int p=0;p<numRows;p++)
   for(int t=0;t<s.length();t++)
     res[p]+=' ';
   int i=0,j=0,k=0;
   for(j=0;k<s.length();j++)
     for(i=0;i<numRows && k<s.length();i++){
-      if(j%(numRows-1)==0)
+      if(!(numRows-1) || j%(numRows-1)==0){
         res[i][j]=s[k++];
+        }
       else{
-
-        cout<<numRows-2-i<<' ';
         res[numRows-2-i][j++] = s[k++];
+        if(numRows-2-i==1)
+          i=-1;
       }
 
   }
@@ -31,7 +32,7 @@ string convert(string s, int numRows){
 }
 
 int main(){
-string res = convert("PAYPALISHIRING",4);
+string res = convert("P",1);
 cout<<res<<endl;
   return 0;
 }
