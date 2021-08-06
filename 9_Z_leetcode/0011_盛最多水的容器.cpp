@@ -17,6 +17,22 @@ int maxArea(vector<int>& height) {
   return max;
 }
 
+int maxArea1(vector<int>& height) {
+        int l = 0, r = height.size() - 1;
+        int ans = 0;
+        while (l < r) {
+            int area = min(height[l], height[r]) * (r - l);
+            ans = max(ans, area);
+            if (height[l] <= height[r]) {
+                ++l;
+            }
+            else {
+                --r;
+            }
+        }
+        return ans;
+    }
+
 int main(){
   vector<int> v(2);
   v[0] = 1;
@@ -29,7 +45,7 @@ int main(){
   // v[7] = 3;
   // v[8] = 7;
 
-  int res = maxArea(v);
+  int res = maxArea1(v);
   cout<<res<<endl;
   return 0;
 }
