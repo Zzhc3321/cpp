@@ -10,7 +10,7 @@ string intToRoman(int num) {
     nums[i--]=num%10;
     num/=10;
   }
-  for(int j=i;j<4;j++){
+  for(int j=i+1;j<4;j++){
     int k = nums[j];
     switch (j) {
       case 3:{
@@ -92,7 +92,7 @@ string intToRoman(int num) {
 }
 
 int main(){
-  string res = intToRoman(1);
+  string res = intToRoman(1994);
   cout<<res;
   return 0;
 }
